@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#64dbe3"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="edu.umsl.tyler.MainActivity">
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EDE066"
+        android:paddingTop="35dp"
+        android:paddingBottom="35dp"
+        android:text="@string/apptitle"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="44sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="30dp">
+
+    <TextView
+        android:id="@+id/minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="35dp"
+        android:textSize="40sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/minutes" />
+
+        <TextView
+            android:id="@+id/semicolon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="35dp"
+            android:textSize="40sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/semicolon" />
+
+    <TextView
+        android:id="@+id/seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="35dp"
+        android:textSize="40sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/seconds" />
+
+        <TextView
+            android:id="@+id/decimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="35dp"
+            android:textSize="40sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/decimal" />
+
+    <TextView
+        android:id="@+id/centiSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="35dp"
+        android:textSize="40sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/centiSeconds" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp">
+
+        <Button
+            android:id="@+id/startStopButton"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#000000"
+            android:textAllCaps="false"
+            android:text="@string/StartStop" />
+
+        <Button
+            android:id="@+id/lapResetButton"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#000000"
+            android:textAllCaps="false"
+            android:text="@string/LapReset" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/lap_fragment"
+        class="edu.umsl.tyler.ui.main.LapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/lap_fragment">
+    </fragment>
+
+</LinearLayout>
